@@ -1,11 +1,20 @@
-var typen = document.getElementById("type");
-var btn = document.getElementById("knop");
+let input = document.querySelector("input");
+let message = document.querySelector("h1");
 
-btn.onclick = function(){
-    var inp = parseFloat(document.getElementById('type').value);
-    var s = 2*Math.PI*inp;
-    alert('omtrek:  ' + s)
+const pi = 3.14;
+
+function berekenOmtrek()
+{
+    return input.value * pi;
 }
 
+function berekenOppervlakte()
+{
+    let test = input.value;
+    return ( test * test * pi * 0.25);
+}
 
-
+function showMessage()
+{
+    message.innerText = "De omtrek van de circel is: " + berekenOmtrek() + " en de oppervlakte is: " + berekenOppervlakte();
+}
